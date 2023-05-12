@@ -9,12 +9,12 @@ import java.util.Scanner;
 
 public class BoardPercent{
     public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
         while(true){
             System.out.println();
             System.out.println("Board Percent Calculator");
             System.out.println();
             System.out.print("Enter the maximum obtainable marks: ");
-            Scanner sc = new Scanner(System.in);
             float max = sc.nextFloat();
             double max2 = max*5D;
             System.out.print("Enter marks for Subject 1: ");
@@ -31,19 +31,18 @@ public class BoardPercent{
             System.out.println("The average percent of these subjects is: "+output+"%");
             System.out.println();
             // while(true){
-            //     System.out.println("Do you want to stop the execution of the program?\n1 for yes\n0 for no");
-            //     String confirm = sc.nextLine();
-            //     if(confirm=="1"){
-            //         break;
-            //     }
-            //     else if(confirm=="0"){
-            //         continue;
-            //     }      
-            //     else{
-            //         System.out.println("Invalid Input!");
-            //     }
-            // }   //Uncomment the code if you know how to solve the issue
-            sc.close();        
+                System.out.println("Do you want to stop the execution of the program?\n\'1\' for yes\n\'0\' for no");
+                int confirm = sc.nextInt();
+                if(confirm==1){
+                    sc.close();
+                    System.exit(0);
+                }
+                else if(confirm==0){
+                    continue;
+                }      
+            // }
+            System.out.println();
         }
+                
     }
 }
