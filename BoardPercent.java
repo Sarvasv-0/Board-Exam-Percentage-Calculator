@@ -9,29 +9,41 @@ import java.util.Scanner;
 
 public class BoardPercent{
     public static void main(String[] args) {
-
-        System.out.println();
-        System.out.println("Board Percent Calculator");
-        System.out.println();
-        System.out.print("Enter the maximum obtainable marks: ");
-        Scanner sc = new Scanner(System.in);
-        float max = sc.nextFloat();
-        double max2 = max*5D;
-        System.out.print("Enter marks for Subject 1: ");
-        float subject1 = sc.nextFloat();
-        System.out.print("Enter marks for Subject 2: ");
-        float subject2 = sc.nextFloat();
-        System.out.print("Enter marks for Subject 3: ");
-        float subject3 = sc.nextFloat();
-        System.out.print("Enter marks for Subject 4: ");
-        float subject4 = sc.nextFloat();
-        System.out.print("Enter marks for Subject 5: ");
-        float subject5 = sc.nextFloat();
-
-
-        double output = (double) (((subject1+subject2+subject3+subject4+subject5)/max2)*100);
-        System.out.println("The average percent of these subjects is: "+output+"%");
-        
-        sc.close();
+        while(true){
+            System.out.println();
+            System.out.println("Board Percent Calculator");
+            System.out.println();
+            System.out.print("Enter the maximum obtainable marks: ");
+            Scanner sc = new Scanner(System.in);
+            float max = sc.nextFloat();
+            double max2 = max*5D;
+            System.out.print("Enter marks for Subject 1: ");
+            float subject1 = sc.nextFloat();
+            System.out.print("Enter marks for Subject 2: ");
+            float subject2 = sc.nextFloat();
+            System.out.print("Enter marks for Subject 3: ");
+            float subject3 = sc.nextFloat();
+            System.out.print("Enter marks for Subject 4: ");
+            float subject4 = sc.nextFloat();
+            System.out.print("Enter marks for Subject 5: ");
+            float subject5 = sc.nextFloat();
+            double output = (double) (((subject1+subject2+subject3+subject4+subject5)/max2)*100);
+            System.out.println("The average percent of these subjects is: "+output+"%");
+            System.out.println();
+            // while(true){
+            //     System.out.println("Do you want to stop the execution of the program?\n1 for yes\n0 for no");
+            //     String confirm = sc.nextLine();
+            //     if(confirm=="1"){
+            //         break;
+            //     }
+            //     else if(confirm=="0"){
+            //         continue;
+            //     }      
+            //     else{
+            //         System.out.println("Invalid Input!");
+            //     }
+            // }   //Uncomment the code if you know how to solve the issue
+            sc.close();        
+        }
     }
 }
